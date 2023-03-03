@@ -1,16 +1,19 @@
 void main() {
-  late final String name; // 값이 들어올때까지 잠시 대기
-  // 값이 아직 들어오지 않았지만 final로 지정할 수 있으며 API와 소통할때 유용함
+  List<int> number = [1, 2, 3, 4, 5];
+  // List<> 로 타입을 명시해 해당 타입의 배열만 만드는 방법
+  number.add(1);
+  print(number);
 
-  name = "Hello";
+  var list = [1, false, 3, 4, "sdf"];
+  // var type으로 배열을 만들면 type 상관없이 들어감
 
-  /*------*/
-
-  final APIfinal = fetchAPI();
-  const APIconst =
-      fetchAPI(); // error. Dart 에서의 const는 다른 외부 함수에서 가져오는 value를 사용할때 사용 x
-}
-
-String fetchAPI() {
-  return "123";
+  var trigger = true;
+  List<int> collection = [
+    1,
+    2,
+    3,
+    4,
+    if (trigger) 5,
+  ]; // trigger if로써 list 내에 if 문을 사용 할 수 있음
+  print((collection));
 }
