@@ -1,8 +1,10 @@
 void main() {
-  // String Interpolation
-  var name = "Lee";
-  var year = 2023;
-  var greeting = "Hello!! $name, ${year + 2}";
-
-  print(greeting);
+  // collection for
+  var oldFriends = ["Lee", "Kim"];
+  var newFriends = [
+    "Boo",
+    "Park",
+    "Nam",
+    for (var friend in oldFriends) "$friend ⭐"
+  ];
 }
