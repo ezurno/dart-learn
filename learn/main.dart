@@ -1,27 +1,14 @@
 void main() {
-  // map
-  // dart 에서의 map 은 ts 의 object, object는 ts의 any
+  // set
 
-  var player = {
-    "name": "Lee",
-    "age": 27,
-  }; // type을 명시하지 않은 map
+  var players = {"Lee", "Kim", "Park"}; // type이 명시되지 않은 set
 
-  Map<int, bool> test = {
-    1: true,
-    2: false,
-  }; // type을 Map<>으로 명시한 map
+  Set<int> numbers = {1, 2, 3}; // type이 명시 된 set
+  numbers.add(4);
+  numbers.add(4);
+  numbers.add(4);
+  numbers.add(4);
+  numbers.add(4);
 
-  List<Map<String, bool>> flavorList = [
-    {
-      "Apple": true,
-      "Abocado": false,
-    },
-    {
-      "Cheese": true,
-      "Milk": true,
-      "Yogurt": true,
-      "Cream": false,
-    },
-  ]; // API 에서 값을 가져올 땐 List와 Map을 이중으로 사용하는 것 보다 후에 배울 class를 이용 하는걸 추천
+  print(numbers); // Set의 값은 List와 달리 unique 하기 떄문에 값이 중복되면 하나만 들어감
 }
