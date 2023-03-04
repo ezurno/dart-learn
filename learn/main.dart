@@ -1,10 +1,15 @@
-typedef ListInt = List<int>; // typedef 로 타입을 재정의
-
 void main() {
-  print(reverseList([1, 2, 3]));
+  var player = Player(); // Dart에선 new를 사용 하지 않아도 됨
+  print(player.name);
+  player.old = 26;
+  print(player.old);
 }
 
-ListInt reverseList(ListInt list) {
-  var reversed = list.reversed; // 뒤집기
-  return reversed.toList(); // reversed 로 뒤집고 나면 iteral이 되므로 다시 List로
-} // test 용 함수
+class Player {
+  String name = "Lee";
+  int old = 27;
+
+  void sayHello() {
+    print("Hello! $name"); // Dart에서는 this를 사용하지 않는 것을 권장 (작동은 함), 대신 $
+  }
+} // class를 사용할 시에는 var보단 type 명시해주어야 됨
