@@ -1,15 +1,23 @@
 void main() {
-  var player = Player(); // Dart에선 new를 사용 하지 않아도 됨
-  print(player.name);
-  player.old = 26;
-  print(player.old);
+  var player1 = Player("Lee", 26);
+  var player2 = Player("Kim", 25);
+
+  print(
+      "${player1.sayHello()}, My name is ${player2.name} ${player2.old} years old.");
 }
 
 class Player {
-  String name = "Lee";
-  int old = 27;
+  late final String name; // final을 먼저 사용 시 값이 없어서 오류. 따라서 late를 써준다
+  late int old;
 
-  void sayHello() {
-    print("Hello! $name"); // Dart에서는 this를 사용하지 않는 것을 권장 (작동은 함), 대신 $
+  // Player(String name, int old) {
+  //   this.name = name;
+  //   this.old = old;
+  // }
+
+  Player(this.name, this.old); // shortcut. 위의 방법을 간단하게 적용
+
+  String sayHello() {
+    return "Hello! $name";
   }
-} // class를 사용할 시에는 var보단 type 명시해주어야 됨
+}
