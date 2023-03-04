@@ -1,17 +1,10 @@
+typedef ListInt = List<int>; // typedef 로 타입을 재정의
+
 void main() {
-  print(reformer("lee"));
-  print(reformer(null));
-
-  String? test;
-  test ??= "Hello"; // test가 null 이면 값을 할당
-  print(test);
+  print(reverseList([1, 2, 3]));
 }
 
-String? reformer(String? word) {
-  return word?.toUpperCase() ?? null;
-}
-/*
-  1. STring? 으로 return 값이 null이 될 수 있음을 알림
-  2. args의 String? 값으로 args 가 null이 될 수 있음
-  3. ?? 로 전자가 null 이면 후자의 값 return
-*/
+ListInt reverseList(ListInt list) {
+  var reversed = list.reversed; // 뒤집기
+  return reversed.toList(); // reversed 로 뒤집고 나면 iteral이 되므로 다시 List로
+} // test 용 함수
