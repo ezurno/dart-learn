@@ -1,41 +1,44 @@
 void main() {
-  var player1 = Player.teamRed(
-    // constructor named. user로부터 name과 old만 가져오고 team은 직접 배정 해줄 때
-    name: "Lee",
-    old: 27,
-  );
-  var player2 = Player.teamBlue(
-    name: "Kim",
-    old: 26,
-  );
+  var apiData = [
+    {
+      "name": "Lee",
+      "country": "KR",
+      "old": 27,
+    },
+    {
+      "name": "Kim",
+      "country": "KR",
+      "old": 26,
+    },
+    {
+      "name": "Park",
+      "country": "KR",
+      "old": 25,
+    },
+  ]; // 외부 api 에서 가져왔다는 예시
 
-  print(
-      "${player1.sayHello()}, My name is ${player2.name} ${player2.old} years old and I'm ${player2.team} team.");
+  apiData.forEach((userJson) {
+    var user = User.fromJson(userJson); // 각 값을 User class로 객체 생성
+    user.userInfo();
+  });
 }
 
-class Player {
-  late final String name;
-  late int old;
-  late String team;
+class User {
+  late final String name, country;
+  late final int old;
 
-  Player({
+  User({
     required this.name,
+    required this.country,
     required this.old,
-    required this.team,
   });
 
-  Player.teamBlue({
-    // constructor named
-    required this.name,
-    required this.old,
-  }) : this.team = "blue"; // Dart에선 특정 변수를 직접 할당 해줄 때 : 를 사용해 객체 초기화를 해준다.
+  User.fromJson(Map<String, dynamic> userJson)
+      : name = userJson["name"],
+        country = userJson["country"],
+        old = userJson["old"];
 
-  Player.teamRed({
-    required this.name,
-    required this.old,
-  }) : this.team = "red";
-
-  String sayHello() {
-    return "Hello! $name";
+  void userInfo() {
+    print("$name , $country, $old");
   }
 }
