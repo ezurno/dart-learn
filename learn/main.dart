@@ -7,6 +7,7 @@ void main() {
   );
 
   lee.sayHello();
+  lee.sayHi();
 }
 
 abstract class Human {
@@ -18,7 +19,16 @@ abstract class Human {
   }
 }
 
-class Student extends Human {
+class Elite {
+  // Mixin을 할 class
+  final int score = 5;
+  void sayHi() {
+    print("I'm elite!");
+  }
+}
+
+class Student extends Human with Elite {
+  // with을 사용해 Mixin을 함 => 상속은 아니지만 대상 class 의 변수나 함수를 가져옴
   final Team team;
 
   Student({
