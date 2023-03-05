@@ -1,26 +1,34 @@
-enum Country { KR, EU } // value의 값을 직접 입력하면 오타가 날 가능성이 생김
-// enum을 사용해 값을 정형화 시켜놓음
+enum Team { red, blue }
 
 void main() {
-  var lee = User(name: "Lee", country: Country.KR, old: 27)
-    ..country = Country.EU
-    ..old = 26; // cascade notation
+  var lee = Student(
+    team: Team.red,
+    name: "lee",
+  );
 
-  print(lee.old);
+  lee.sayHello();
 }
 
-class User {
-  String name;
-  Country country; // enum type을 걸어놓으면 country 의 값은 enum 의 value만 사용이 가능함
-  int old;
+abstract class Human {
+  final String name;
+  Human({required this.name}); // abstract의 constructor
 
-  User({
-    required this.name,
-    required this.country,
-    required this.old,
-  });
+  void sayHello() {
+    print("Hi my name is $name.");
+  }
+}
 
-  void userInfo() {
-    print("$name , $country, $old");
+class Student extends Human {
+  final Team team;
+
+  Student({
+    required this.team,
+    required String name,
+  }) : super(name: name); // name은 parent로부터 오는 것 이므로 super로 연결 시켜준다
+
+  @override
+  void sayHello() {
+    super.sayHello(); // super로 override 할 parent의 sayHello 가져옴
+    print("and I play for ${team.name}");
   }
 }
