@@ -2,12 +2,19 @@
 
 ## 📕 목 록
 
-1. Type 의 종류
-2. Null Safety 란?
-3. List
-4. Map
-5. Set
-6. Collection, String Interpolation
+#### [1. Type 의 종류](#1-type-ec9d98-eca285eba598-1)
+
+#### [2. Null Safety 란?](#2-null-safety-eb9e80-1)
+
+#### [3. List](#3-list-1)
+
+#### [4. Map](#4-map-1)
+
+#### [5. Set](#5-set-1)
+
+#### [6. Collection, String Interpolation](#6-collection-string-interpolation-1)
+
+#### [7. Parameter](#7-parameter-1)
 
 <br/>
 
