@@ -2,9 +2,9 @@
 
 ## 📕 목 록
 
-#### [1. Type의 종류](#1-type-1)
+#### [1. Type의 종류](#1-type)
 
-#### [2. Null Safety 란?](#2-null-safety-1)
+#### [2. Null Safety 란?](#2-null-safety)
 
 #### [3. List](#3-list-1)
 
@@ -24,7 +24,7 @@
 
 #### [11. Enum](#11-enum-1)
 
-#### [12. Abstract, super, override](#12abstract-super-override-1)
+#### [12. Abstract, super, override](#12abstract-super-override)
 
 #### [13. Mixin](#13-mixin-1)
 
