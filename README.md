@@ -2,9 +2,9 @@
 
 ## 📕 목 록
 
-#### [1. Type 의 종류](#1-type-ec9d98-eca285eba598-1)
+#### [1. Type](#1-type-1)
 
-#### [2. Null Safety 란?](#2-null-safety-eb9e80-1)
+#### [2. Null Safety](#2-null-safety-1)
 
 #### [3. List](#3-list-1)
 
@@ -16,13 +16,15 @@
 
 #### [7. Parameter](#7-parameter-1)
 
+#### [8. ??, ??=](#8-1)
+
 <br/>
 
 ---
 
 <br/>
 
-> ## **1. Type 의 종류**
+> ## **1. Type**
 
 <br>
 
@@ -64,7 +66,7 @@
 <br/>
 <br/>
 
-> ## **2. Null Safety 란 ?**
+> ## **2. Null Safety**
 
 <br/>
 <br/>
@@ -250,7 +252,7 @@
 <br/>
 <br/>
 
-> ## **7. parameter**
+> ## **7. Parameter**
 
 <br/>
 <br/>
@@ -290,6 +292,50 @@
         String? country,
     }) {
         return "Bye, $name $country in $year ";
+    }
+
+```
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+> ## **8. ??, ??=**
+
+<br/>
+<br/>
+
+#### **??**
+
+- ?? 연산자는 전자가 null 값이면 후자를 반환해 줌
+
+```Dart
+    void main() {
+        String? reformer(String? word) {
+        return word?.toUpperCase() ?? null;
+        }
+
+        /*
+        1. STring? 으로 return 값이 null이 될 수 있음을 알림
+        2. args의 String? 값으로 args 가 null이 될 수 있음
+        3. ?? 로 전자가 null 이면 후자의 값 return
+        */
+    }
+```
+
+<br/>
+<br/>
+
+#### **??=**
+
+- 만약 값이 null 이면 값을 할당
+
+```Dart
+    void main() {
+        String? test;
+        test ??= "Hello"; // test가 null 이면 값을 할당
+        print(test);
     }
 
 ```
