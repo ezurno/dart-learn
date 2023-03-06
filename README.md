@@ -6,7 +6,8 @@
 2. Null Safety 란?
 3. List
 4. Map
-5. Collection, String Interpolation
+5. Set
+6. Collection, String Interpolation
 
 <br/>
 
@@ -80,6 +81,9 @@
 ```
 
 <br/>
+<br/>
+<br/>
+<br/>
 
 > ## **3. List**
 
@@ -104,6 +108,9 @@
     }
 ```
 
+<br/>
+<br/>
+<br/>
 <br/>
 
 > ## **4. Map**
@@ -149,8 +156,40 @@
 ```
 
 <br/>
+<br/>
+<br/>
+<br/>
 
-> ## **5. Collection, String Interpolation**
+> ## **5. Set**
+
+<br/>
+<br/>
+
+#### **Set<>**
+
+- Set 은 List와 다르게 값이 unique함, 중복값이 들어오면 변하지 않음
+- {} 를 사용함
+
+```Dart
+    void main() {
+        // set
+        var players = {"Lee", "Kim", "Park"}; // type이 명시되지 않은 set
+        Set<int> numbers = {1, 2, 3}; // type이 명시 된 set
+        numbers.add(4);
+        numbers.add(4);
+        numbers.add(4);
+        numbers.add(4);
+        numbers.add(4);
+        print(numbers); // Set의 값은 List와 달리 unique 하기 떄문에 값이 중복되면 하나만 들어감
+    }
+```
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+> ## **6. Collection, String Interpolation**
 
 <br/>
 <br/>
@@ -199,4 +238,56 @@
     }
 ```
 
+<br/>
+<br/>
+<br/>
+<br/>
+
+> ## **7. parameter**
+
+<br/>
+<br/>
+
+#### **Positional**
+
+- 매개변수에 값을 순서대로 넣어야 함
+- [] 로 없어도 되는 값을 감싸주고 ?를 사용해 default 값을 넣어줌
+- Positional을 사용하는 것 보단 다음에 나올 Named를 사용하는 것이 더 간결하고 좋아보임
+
+```Dart
+    void main() {
+        print(sayHello("Lee", "2023"));
+    }
+
+    String sayHello(String name, String country, [int? year = 2023]) {
+        return "Hello! $name, $country in $year";
+    }
+```
+
+<br/>
+<br/>
+
+#### **Named**
+
+- 매개변수를 {} 로 감싸주면 Named parameter
+- 반드시 넣어야하는 값엔 required, 없어도 되는 값이면 ? 을 사용해 표기
+
+```Dart
+    void main() {
+        print(sayBye(name: "Lee", country: "KR"));
+    }
+
+    String sayBye({
+        required String name,
+        int year = 2022, // default value
+        String? country,
+    }) {
+        return "Bye, $name $country in $year ";
+    }
+
+```
+
+<br/>
+<br/>
+<br/>
 <br/>
