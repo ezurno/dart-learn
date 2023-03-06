@@ -79,7 +79,6 @@
 > ## **2. Null Safety**
 
 <br/>
-<br/>
 
 - 기존 Dart에서는 null 값이 참조되면 컴파일 에러가 났었음
 
@@ -107,7 +106,6 @@
 > ## **3. List**
 
 <br/>
-<br/>
 
 #### **List<>**
 
@@ -134,7 +132,6 @@
 
 > ## **4. Map**
 
-<br/>
 <br/>
 
 #### **Map<>**
@@ -182,7 +179,6 @@
 > ## **5. Set**
 
 <br/>
-<br/>
 
 #### **Set<>**
 
@@ -210,7 +206,6 @@
 
 > ## **6. Collection, String Interpolation**
 
-<br/>
 <br/>
 
 #### **String Interpolation**
@@ -265,7 +260,6 @@
 > ## **7. Parameter**
 
 <br/>
-<br/>
 
 #### **Positional**
 
@@ -314,7 +308,6 @@
 > ## **8. ??, ??=**
 
 <br/>
-<br/>
 
 #### **??**
 
@@ -358,7 +351,6 @@
 > ## **9. Typedef**
 
 <br/>
-<br/>
 
 #### **Typedef**
 
@@ -377,7 +369,6 @@
 
 > ## **10. Class**
 
-<br/>
 <br/>
 
 #### **Constructor**
@@ -457,7 +448,7 @@
 
     String sayHello() {
         return "Hello! $name";
-    }
+        }
     }
 
 ```
@@ -489,7 +480,6 @@
 > ## **11. Enum**
 
 <br/>
-<br/>
 
 #### **Enum**
 
@@ -516,7 +506,6 @@
 
 > ## **12.Abstract, super, override**
 
-<br/>
 <br/>
 
 #### **Abstract**
@@ -571,7 +560,6 @@
 
 > ## **13. Mixin**
 
-<br/>
 <br/>
 
 #### **Mixin**
